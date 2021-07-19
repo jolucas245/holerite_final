@@ -3,15 +3,16 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:holerite/app/data/api/pdf_api.dart';
+import 'package:holerite/app/ui/widgets/widgets_controller.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends GetView<WidgetsController> {
 
-  TextEditingController controller;
+  TextEditingController controllerField;
   double verticalContent;
   int fontSize;
   int iconSize;
   double rightSpaceIcon;
-  CustomTextField({Key key, this.controller, this.verticalContent, this.fontSize, this.iconSize, this.rightSpaceIcon});
+  CustomTextField({Key key, this.controllerField, this.verticalContent, this.fontSize, this.iconSize, this.rightSpaceIcon});
 
   PdfApi cpf = PdfApi();
 
@@ -22,7 +23,7 @@ class CustomTextField extends StatelessWidget {
         LengthLimitingTextInputFormatter(14)
       ],
       cursorColor: Colors.white,
-      controller: controller,
+      controller: controllerField,
       decoration: InputDecoration(
         border: InputBorder.none,
         enabledBorder: InputBorder.none,
@@ -49,23 +50,23 @@ class CustomTextField extends StatelessWidget {
   // Mexe aqui não irmão
   validate(){
     RegExp regExp = RegExp(r'^[0-9.-]+$');
-    if(controller.text.isEmpty){
+    if(controllerField.text.isEmpty){
       Get.isSnackbarOpen 
       ? null
       : 
       snackBarWidget("Preencha o campo abaixo", Colors.red);
-    }else if(controller.text.length < 14){
+    }else if(controllerField.text.length < 14){
       Get.isSnackbarOpen 
       ? null
       :
       snackBarWidget("Utilize 11 números", Colors.red);
-    }else if(regExp.hasMatch(controller.text) == false){
+    }else if(regExp.hasMatch(controllerField.text) == false){
       Get.isSnackbarOpen
       ? null
       :
       snackBarWidget("Utilize apenas números", Colors.red);
     }else{
-      cpf.getPdf(controller.text);
+      cpf.getPdf(controller.mes.value, controllerField.text);
     }
 
   }

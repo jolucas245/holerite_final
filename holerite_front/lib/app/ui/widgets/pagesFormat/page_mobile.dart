@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:holerite/app/ui/widgets/textFields/custom_field_mobile.dart';
+import 'package:holerite/app/ui/widgets/widgets_controller.dart';
 
-class PageMobile extends StatelessWidget {
+class PageMobile extends GetView<WidgetsController> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,6 +30,31 @@ class PageMobile extends StatelessWidget {
                   height: 200,
                 ),
                 SizedBox(height: 75,),
+                Obx(
+                  () => Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Radio(
+                        value: "maio", 
+                        groupValue: controller.mes.value, 
+                        onChanged: (String value){
+                          controller.mes.value = value;
+                        },
+                        activeColor: Colors.indigo,
+                      ),
+                      Text("Maio", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                      Radio(
+                        value: "junho", 
+                        groupValue: controller.mes.value, 
+                        onChanged: (String value){
+                        controller.mes.value = value;
+                      },
+                      activeColor: Colors.indigo,
+                      ),
+                      Text("Junho", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                    ],
+                  ),
+                ),
                 CustomFieldMobile()
               ],
             ),

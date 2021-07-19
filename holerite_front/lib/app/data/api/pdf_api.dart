@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 class PdfApi {
 
-  getPdf(String cpf) async {
-    Get.to(DirectPage(), arguments: cpf);
+  getPdf(String mes, String cpf) async {
+    Get.to(DirectPage(), arguments: [mes, cpf]);
   }
 }

@@ -41,7 +41,7 @@ class CustomFieldWeb extends StatelessWidget {
               ),
               child: CustomTextField(
                 verticalContent: 40,
-                controller: controller,
+                controllerField: controller,
               )
             ),
           ),

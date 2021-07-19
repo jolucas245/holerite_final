@@ -41,7 +41,7 @@ class CustomFieldMobile extends StatelessWidget {
                 ]
               ),
               child: CustomTextField(
-                controller: controller,
+                controllerField: controller,
                 verticalContent: 5,
                 fontSize: 20,
                 iconSize: 30,
