@@ -78,6 +78,15 @@ class PageWeb extends GetView<WidgetsController> {
                       activeColor: Colors.indigo,
                       ),
                       Text("Junho", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                      Radio(
+                        value: "julho", 
+                        groupValue: controller.mes.value, 
+                        onChanged: (String value){
+                        controller.mes.value = value;
+                      },
+                      activeColor: Colors.indigo,
+                      ),
+                      Text("Julho", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
                     ],
                   ),
                 ),
