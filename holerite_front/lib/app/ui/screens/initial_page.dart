@@ -10,7 +10,7 @@ class InitialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
-        body: constraints.maxWidth > 600 ? PageWeb() : PageMobile(),
+        body: constraints.maxWidth > 818 ? PageWeb() : PageMobile(),
       );
     });
   }

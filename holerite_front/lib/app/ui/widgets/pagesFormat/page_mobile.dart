@@ -31,36 +31,115 @@ class PageMobile extends GetView<WidgetsController> {
                 ),
                 SizedBox(height: 75,),
                 Obx(
-                  () => Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  () => Column(
                     children: [
-                      Radio(
-                        value: "maio", 
-                        groupValue: controller.mes.value, 
-                        onChanged: (String value){
-                          controller.mes.value = value;
-                        },
-                        activeColor: Colors.indigo,
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     Radio(
+                      //       value: "maio", 
+                      //       groupValue: controller.mes.value, 
+                      //       onChanged: (String value){
+                      //         controller.mes.value = value;
+                      //       },
+                      //       activeColor: Colors.indigo,
+                      //     ),
+                      //     Text("Maio", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                      //     Radio(
+                      //       value: "junho", 
+                      //       groupValue: controller.mes.value, 
+                      //       onChanged: (String value){
+                      //       controller.mes.value = value;
+                      //     },
+                      //     activeColor: Colors.indigo,
+                      //     ),
+                      //     Text("Junho", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                          
+                      //   ],
+                      // ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     Radio(
+                      //       value: "julho", 
+                      //       groupValue: controller.mes.value, 
+                      //       onChanged: (String value){
+                      //       controller.mes.value = value;
+                      //     },
+                      //     activeColor: Colors.indigo,
+                      //     ),
+                      //     Text("Julho", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                      //     Radio(
+                      //       value: "agosto", 
+                      //       groupValue: controller.mes.value, 
+                      //       onChanged: (String value){
+                      //       controller.mes.value = value;
+                      //     },
+                      //     activeColor: Colors.indigo,
+                      //     ),
+                      //     Text("Agosto", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                      //   ],
+                      // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Radio(
+                            value: "setembro", 
+                            groupValue: controller.mes.value, 
+                            onChanged: (String value){
+                            controller.mes.value = value;
+                          },
+                          activeColor: Colors.indigo,
+                          ),
+                          Text("Setembro", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                          Radio(
+                            value: "outubro", 
+                            groupValue: controller.mes.value, 
+                            onChanged: (String value){
+                            controller.mes.value = value;
+                          },
+                          activeColor: Colors.indigo,
+                          ),
+                          Text("Outubro", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                        ],
                       ),
-                      Text("Maio", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
-                      Radio(
-                        value: "junho", 
-                        groupValue: controller.mes.value, 
-                        onChanged: (String value){
-                        controller.mes.value = value;
-                      },
-                      activeColor: Colors.indigo,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Radio(
+                            value: "novembro", 
+                            groupValue: controller.mes.value, 
+                            onChanged: (String value){
+                            controller.mes.value = value;
+                          },
+                          activeColor: Colors.indigo,
+                          ),
+                          Text("Novembro", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                          Radio(
+                            value: "dezembro", 
+                            groupValue: controller.mes.value, 
+                            onChanged: (String value){
+                            controller.mes.value = value;
+                          },
+                          activeColor: Colors.indigo,
+                          ),
+                          Text("Dezembro", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                        ]
                       ),
-                      Text("Junho", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
-                      Radio(
-                        value: "julho", 
-                        groupValue: controller.mes.value, 
-                        onChanged: (String value){
-                        controller.mes.value = value;
-                      },
-                      activeColor: Colors.indigo,
-                      ),
-                      Text("Julho", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Radio(
+                            value: "fundeb", 
+                            groupValue: controller.mes.value, 
+                            onChanged: (String value){
+                            controller.mes.value = value;
+                          },
+                          activeColor: Colors.indigo,
+                          ),
+                          Text("FUNDEB", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900),),
+                        ]
+                      )
                     ],
                   ),
                 ),

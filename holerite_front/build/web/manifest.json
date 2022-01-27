@@ -1,6 +1,6 @@
 {
-    "name": "holerite",
-    "short_name": "holerite",
+    "name": "holerite_front",
+    "short_name": "holerite_front",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
